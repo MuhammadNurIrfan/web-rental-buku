@@ -9,6 +9,14 @@
     <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-md-3">
         <h1 class="mb-5">Book Rent Form</h1>
 
+        <div class="mt-5">
+            @if (session('message'))
+                <div class="alert {{session('alert-class')}}">
+                    {{ session('message') }}
+                </div>
+            @endif
+        </div>
+
         <form action="book-rent" method="post">
             @csrf
             <div class="mb-3">
